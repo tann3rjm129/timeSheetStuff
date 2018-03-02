@@ -13,3 +13,15 @@
 .fonts {
 	font-family: 'Allerta Stencil', sans-serif;
 }
+
+body {
+	background-color: #78909c;
+}
+
+.card {
+	border-color: orange;
+}
+
+#addEmployee {
+	color: orange;
+}
