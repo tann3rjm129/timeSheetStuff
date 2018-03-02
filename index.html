@@ -50,13 +50,13 @@
 
                     <!--Table body-->
                     <tbody>
-                        <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tr id="tableRow">
+                            <td scope="row" id="rowRame"></td>
+                            <td id="rowRole"></td>
+                            <td id="rowStart"></td>
+                            <td id="rowMonthsWorked"></td>
+                            <td id="rowMonthlyRate"></td>
+                            <td id="totalBilled"></td>
                         </tr>
               
                 </table>
@@ -82,21 +82,21 @@
 			<form>
   			<div class="form-group">
     			<label for="exampleInputEmail1" class="fonts">Employee Name</label>
-    			<input id="searchTerm" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    			<input id="searchTerm" class="form-control" id="name" aria-describedby="emailHelp">
   			</div>
   			<div class="form-group">
    				<label for="exampleInputEmail1" class="fonts">Role</label>
-          <input id="searchTerm" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input id="searchTerm" class="form-control" id="role" aria-describedby="emailHelp">
         </div>
   			<div class="form-group">
     			<label for="exampleInputEmail1" class="fonts">Start Date</label>
-    			<input id="startYear" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    			<input id="startYear" class="form-control" id="startDate" aria-describedby="emailHelp">
   			</div>
   			<div class="form-group">
     			<label for="exampleInputEmail1" class="fonts">Monthly-Rate</label>
-    			<input id="endYear" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    			<input id="endYear" class="form-control" id="monthlyRate" aria-describedby="emailHelp">
   			</div>
-  			<button id="searchButton" class="btn btn-primary fonts">Add</button>
+  			<button id="addEmployee" class="btn btn-primary fonts">Add</button>
 			</form>
   </div>
 </div>
