@@ -14,28 +14,40 @@ $(document).ready(function(){
      var EmployeeName = " ";
      var Role = " ";
      var StartDate = " ";
-     var MonthsWorked ="";
+     var MonthsWorked = " ";
      var MonthlyRate = " ";
      var TotalBilled = " ";
+
     $("#addEmployee").on("click", function(){
-            event.preventDefault();
-        EmployeeName = $("#name").val().trim();
-        Role = $("#role").val().trim();
-        StartDate = $("#startDate").val().trim();
-        MonthlyRate = $("#monthlyRate").val().trim();
+
+        event.preventDefault();
+
+        EmployeeName = $("#name").val();
+        Role = $("#role").val();
+        StartDate = $("#startDate").val();
+        MonthlyRate = $("#monthlyRate").val();
+
         database.ref().set({
+
         EmployeeName: EmployeeName,
         Role: Role,
         StartDate: StartDate,
         MonthlyRate: MonthlyRate
         
       });
-        database.ref().on("value", function(snapshot) {
-        $("#rowRame").text(snapshot.val().EmployeeName);
-        $("#rowRoll").text(snapshot.val().Role);
-        $("#rowStart").text(snapshot.val().StartDate);
-        $("#rowMonthlyRate").text(snapshot.val().MonthlyRate);
+
+
+        database.ref().on("child_added", function(snapshot) {
+
+        var employeeRow = $("<tr>");
+
+        employeeRow.append(snapshot.val().EmployeeName);
+        employeeRow.append(snapshot.val().Role);
+        employeeRow.append(snapshot.val().StartDate);
+        employeeRow.append(snapshot.val().MonthlyRate);
       
+        $("#tableRow").append(employeeRow);
+
         });
         
         

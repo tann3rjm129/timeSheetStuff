@@ -7,7 +7,7 @@
 
 	background-image: url(city-line.jpeg);
 	background-size: 100% 100%;
-	border-bottom: 3px solid orange;
+	border-bottom: 3px solid #fb7354;
 }
 
 .fonts {
@@ -19,9 +19,9 @@ body {
 }
 
 .card {
-	border-color: orange;
+	border-color: #fb7354;
 }
 
 #addEmployee {
-	color: orange;
+	color: #fb7354;
 }
